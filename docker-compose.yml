@@ -99,6 +99,8 @@ services:
       - ./grafana/provisioning/:/etc/grafana/provisioning/
     env_file:
       - ./grafana/config.monitoring
+    environment:
+      - GF_INSTALL_PLUGINS=jasonlashua-prtg-datasource
     networks:
       - back-tier
       - front-tier
